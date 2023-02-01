@@ -37,3 +37,11 @@ output
 ```console
 \/path\/to\/some\/where\/
 ```
+
+# Find a string block between two patterns
+
+```bash
+sed -n '/PAT1/,/PAT2/p' FILE
+```
+
+
