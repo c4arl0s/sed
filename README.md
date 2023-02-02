@@ -44,4 +44,57 @@ output
 sed -n '/PAT1/,/PAT2/p' FILE
 ```
 
+# Remove empty lines in a file
 
+cat file.txt
+
+```console
+PATTERN1
+73281t478124
+73218362131
+321y748t2148t
+PATTERN2
+
+PATTERN1
+dhsajdgghqwdbhj
+dshajdgsahdjashjd
+hdghjsagdhjas
+hgshjdagdhj
+dhsajdhasj
+PATTERN2
+
+===============
+
+PATTERN1
+236713
+372183671
+362163721
+PATTERN2
+```
+
+```console
+cat file.txt | sed "/^ *$/d"
+```
+
+Output
+
+```console
+PATTERN1
+73281t478124
+73218362131
+321y748t2148t
+PATTERN2
+PATTERN1
+dhsajdgghqwdbhj
+dshajdgsahdjashjd
+hdghjsagdhjas
+hgshjdagdhj
+dhsajdhasj
+PATTERN2
+===============
+PATTERN1
+236713
+372183671
+362163721
+PATTERN2
+```
