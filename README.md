@@ -1,6 +1,39 @@
 # sed
 
-cheatsheet of sed.
+`sed` – stream editor
+
+# SYNOPSIS
+
+```vim
+sed [-Ealnru] command [-I extension] [-i extension] [file ...]
+sed [-Ealnru] [-e command] [-f command_file] [-I extension] [-i extension] [file ...]
+```
+
+# EXAMPLES
+
+- Replace `‘bar’` with `‘baz’` when piped from another command:
+
+```console
+echo "An alternate word, like bar, is sometimes used in examples." | sed 's/bar/baz/'
+```
+
+- Using backlashes can sometimes be hard to read and follow:
+
+```console
+echo "/home/example" | sed  's/\/home\/example/\/usr\/local\/example/'
+```
+
+- Using a different separator can be handy when working with paths:
+
+```console
+echo "/home/example" | sed 's#/home/example#/usr/local/example#'
+```
+
+- Replace all occurances of ‘foo’ with ‘bar’ in the file test.txt, without creating a backup of the file:
+
+```console
+sed -i '' -e 's/foo/bar/g' test.txt
+```
 
 # Replace with sed
 
