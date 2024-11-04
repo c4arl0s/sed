@@ -131,3 +131,11 @@ PATTERN1
 362163721
 PATTERN2
 ```
+
+# old solution
+
+```bash
+find . -name "*.txt" | while read txtfile; do sed -i "" -e "s/ : /:/g" ${txtfile}; done
+```
+
+<img width="1022" alt="Screenshot 2024-11-03 at 8 12 36 p m" src="https://github.com/user-attachments/assets/466b548b-f3b1-4c24-a689-e5811e4dee82">
